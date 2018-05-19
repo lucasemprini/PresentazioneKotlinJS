@@ -168,4 +168,47 @@
         \includegraphics[scale=0.5]{img/HelloWorld}
       \end{center}
     \end{frame}
+
+    \begin{frame}
+
+    \end{frame}
+
+    \section{Kotlin / JavaScript}
+    \begin{frame}
+      \frametitle{Perché JavaScript?}
+      \begin{block}{JetBrains afferma}
+        \begin{itemize}[<+->]
+          \item Scrivere una Web Application interamente in Kotlin.
+          \bigskip
+          \item Vantaggi di un linguaggio \textbf{staticamente tipato}.
+          \bigskip
+          \item Con la possibilità di definire dei $Dynamic$ $Types$.
+          \bigskip
+          \item Librerie in continua evoluzione.
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Getting Started}
+      \begin{block}{Diversi modi per compilare Kotlin in Javascript}
+        \begin{itemize}
+          \item \alert{Gradle} (consigliato)
+          \item IntelliJ IDEA
+          \item Maven
+          \item Linea di comando
+        \end{itemize}
+      \end{block}
+      \begin{block}{Compilazione}
+        Quando compila in JavaScript, Kotlin esegue due file principali:
+        \begin{itemize}
+          \item \textbf{kotlin.js}: La runtime e la standard library, indipendente dalle applicazioni e legato
+          alla versione di Kotlin usata.
+          \item \textbf{\{module\}.js}: Il codice effettivo dall'applicazione; infatti, tutti i file vengono compilati
+          in un unico file JavaScript che ha lo stesso nome del modulo.
+        \end{itemize}
+        Inoltre, ognuno di questi ha anche un meta file (\textbf{\{file\}.meta.js}) corrispondente che verrà
+        utilizzato per le Reflection ed altre funzionalità.
+      \end{block}
+    \end{frame}
 \end{document}
