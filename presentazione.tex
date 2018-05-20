@@ -169,8 +169,78 @@
       \end{center}
     \end{frame}
 
+    \section{La Sintassi}
     \begin{frame}
+      \frametitle{I costrutti principali di Kotlin (1)}
+      \framesubtitle{IMMUTABILITA': \textbf{\texttt{val}} vs. \textbf{\texttt{var}}}
+      \begin{columns}
+        \begin{column}{0.47\textwidth}
+          \begin{block}{Supporto built-in}
+            \begin{itemize}
+              \item \textbf{\texttt{var}}: mutabile.
+              \item \textbf{\texttt{val}}: immutabile (consigliato).
+            \end{itemize}
+          \end{block}
+          \begin{block}{Anche a livello di Classi}
+            Concetto di "\textbf{class properties}":
+            \begin{itemize}
+              \item proprietà \textbf{\texttt{var}}: \alert{genera} automaticamente getter e setter
+              \item proprietà \textbf{\texttt{val}}: \alert{genera} automaticamente getter
+            \end{itemize}
+          \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[scale=0.75]{Immutability}
+        \end{column}
+      \end{columns}
+    \end{frame}
 
+    \begin{frame}
+      \frametitle{I costrutti principali di Kotlin (2)}
+      \framesubtitle{NULL SAFETY}
+      \begin{columns}
+        \begin{column}{0.47\textwidth}
+          \begin{block}{Motivazione}
+             Evitare le \textbf{\texttt{NullPointerException}}.
+          \end{block}
+          Kotlin differenzia tipi nullable e non-nullable aggiungendo il simbolo "\textbf{?}":
+          \begin{itemize}
+            \item \texttt{String} - (Default) Non può essere null: non-nullable.
+            \item \texttt{String?} - Può essere null: nullable.
+          \end{itemize}
+          \begin{block}{Gestione}
+            I tipi nullable vengono gestiti usando tipicamente l'operatore di \textbf{safe call} \alert{?.}
+          \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+            \includegraphics[scale=0.4]{NullSafety}
+        \end{column}
+      \end{columns}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{I costrutti principali di Kotlin (3)}
+      \framesubtitle{DATA-CLASSES}
+      \begin{center}
+        \includegraphics[scale=0.5]{DataClass}
+      \end{center}
+      Una Data class crea \alert{implicitamente}:
+      \begin{itemize}
+        \item Metodi getters/setters.
+        \item Metodi equals(), hashCode(), toString(), copy().
+      \end{itemize}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{I costrutti principali di Kotlin (4)}
+      \framesubtitle{EXTENSION FUNCTIONS}
+      \begin{center}
+        \includegraphics[scale=0.4]{ExtFun}
+      \end{center}
+      \begin{itemize}
+        \item Permette di aggiungere nuove funzionalità ad una classe (anche di Standard Library) senza l'utilizzo di ereditarietà o decoratori.
+        \item Kotlin permette l'uso di \textbf{extension functions} ed \textbf{extension properties}.
+      \end{itemize}
     \end{frame}
 
     \section{Kotlin / JavaScript}
@@ -180,13 +250,23 @@
         \begin{itemize}[<+->]
           \item Scrivere una Web Application interamente in Kotlin.
           \bigskip
-          \item Vantaggi di un linguaggio \textbf{staticamente tipato}.
+          \item Vantaggi di un linguaggio \textbf{staticamente tipizzato}.
           \bigskip
           \item Con la possibilità di definire dei $Dynamic$ $Types$.
           \bigskip
+          \item Riduzione della verbosità per molti costrutti.
+          \bigskip
           \item Librerie in continua evoluzione.
+          \bigskip
         \end{itemize}
       \end{block}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Kotlin vs. JavaScript: tipaggio statico}
+      \begin{center}
+        \includegraphics[scale=0.35]{StatVSDinPNG}
+      \end{center}
     \end{frame}
 
     \begin{frame}
@@ -211,4 +291,27 @@
         utilizzato per le Reflection ed altre funzionalità.
       \end{block}
     \end{frame}
+
+    \begin{frame}
+      \frametitle{Impostare Gradle (1)}
+      \begin{center}
+      \includegraphics[scale=0.5]{NewProject}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Impostare Gradle (2)}
+      \begin{block}{Configurare le compiler options}
+        \includegraphics[scale=0.67]{Kt2JsGradle}
+      \end{block}
+      \begin{block}{Cosa stiamo dicendo?}
+        \begin{itemize}
+          \item \textbf{\texttt{outputFile}}: La locazione dei file .js compilati.
+          \item \textbf{\texttt{moduleKind}}: Il tipo di module loader di JavaScript.
+          \item \textbf{\texttt{sourceMap}}: Flag molto utile per il debugging: il codice JavaScript generato è spesso difficile da leggere e capire.
+        \end{itemize}
+      \end{block}
+    \end{frame}
+
+
 \end{document}
