@@ -281,7 +281,7 @@
     \end{frame}
 
     \begin{frame}
-      \frametitle{Getting Started}
+      \frametitle{Getting Started (1)}
       \begin{block}{Diversi modi per compilare Kotlin in Javascript}
         \begin{itemize}
           \item \alert{Gradle} (consigliato)
@@ -290,6 +290,13 @@
           \item Linea di comando
         \end{itemize}
       \end{block}
+      \begin{center}
+        \includegraphics[scale=0.2]{KtGradle}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Getting Started (2)}
       \begin{block}{Compilazione}
         Quando compila in JavaScript, Kotlin esegue due file principali:
         \begin{itemize}
@@ -353,12 +360,20 @@
       \end{center}
     \end{frame}
     %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+
     \begin{frame}
       \frametitle{Il Framework \textbf{ktor}}
-      \includegraphics[scale=0.2]{Ktor}
-      \begin{block}{Definizione}
-        Ktor è un framework per la creazione di server e client asincroni in sistemi connessi utilizzando Kotlin come linguaggio di programmazione.
-      \end{block}
+      \begin{columns}
+        \begin{column}{0.47\textwidth}
+          \includegraphics[scale=0.2]{Ktor}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+          \begin{block}{Definizione}
+            Ktor è un framework per la creazione di server e client asincroni in sistemi connessi utilizzando Kotlin come linguaggio di programmazione.
+          \end{block}
+        \end{column}
+      \end{columns}
+      \bigskip
       \begin{itemize}
         \item Sfrutta le strutture delle \alert{Kotlin coroutines} ed altre peculiarità del linguaggio per la programmazione asincrona.
       \end{itemize}
