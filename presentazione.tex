@@ -80,10 +80,19 @@
     \end{frame}
 }
 
+\AtEndDocument{
+  \begin{frame}<beamer>
+    \frametitle{Fine}
+    \begin{center}
+      {\LARGE Grazie per l'attenzione!}
+    \end{center}
+  \end{frame}
+}
+
 \title[KotlinJs]{%
     KotlinJS
 }
-\subtitle{Compiling Kotlin to JavaScript}
+\subtitle{Compilare Kotlin in JavaScript}
 
 \author[Luca~Semprini]{\large{Luca~Semprini}\\\medskip\small{0000854447}}
 
@@ -252,6 +261,8 @@
           \bigskip
           \item Vantaggi di un linguaggio \textbf{staticamente tipizzato}.
           \bigskip
+          \item Tutti i vantaggi dell'approccio funzionale.
+          \bigskip
           \item Con la possibilità di definire dei $Dynamic$ $Types$.
           \bigskip
           \item Riduzione della verbosità per molti costrutti.
@@ -313,5 +324,44 @@
       \end{block}
     \end{frame}
 
+    \section{Librerie e Framework utili}
+    \begin{frame}
+      \frametitle{Dalla Standard Library: \textbf{kotlin.browser}}
+      \begin{block}{Pensata per JavaScript}
+        Accesso alle proprietà top-level (\texttt{document}, \texttt{window}, ecc.) all'interno dell'ambiente Browser.
+      \end{block}
+      \begin{center}
+        \includegraphics[scale=0.33]{KotlinHtmlX}
+      \end{center}
+    \end{frame}
+
+    \begin{frame}
+      \frametitle{Un DSL per HTML: \textbf{kotlinx.html}}
+      \begin{block}{Motivazione}
+        La libreria kotlinx.html fornisce un Domain-Specific-Language per \alert{generare} HTML, DOM o classi CSS.
+      \end{block}
+      \begin{center}
+        \includegraphics[scale=0.67]{KotlinxHtmlEx}
+      \end{center}
+    \end{frame}
+
+    %%%%%%%%%%%% Necessario?? %%%%%%%%%%%
+    \begin{frame}
+      \frametitle{\textbf{kotlinx.html}: un altro esempio}
+      \begin{center}
+        \includegraphics[scale=0.5]{HtmlXCreateTable}
+      \end{center}
+    \end{frame}
+    %%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%%
+    \begin{frame}
+      \frametitle{Il Framework \textbf{ktor}}
+      \includegraphics[scale=0.2]{Ktor}
+      \begin{block}{Definizione}
+        Ktor è un framework per la creazione di server e client asincroni in sistemi connessi utilizzando Kotlin come linguaggio di programmazione.
+      \end{block}
+      \begin{itemize}
+        \item Sfrutta le strutture delle \alert{Kotlin coroutines} ed altre peculiarità del linguaggio per la programmazione asincrona.
+      \end{itemize}
+    \end{frame}
 
 \end{document}
