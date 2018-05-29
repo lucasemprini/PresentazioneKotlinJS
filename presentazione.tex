@@ -202,8 +202,8 @@
           \begin{block}{Anche a livello di Classi}
             Concetto di "\textbf{class properties}":
             \begin{itemize}
-              \item proprietà \textbf{\texttt{var}}: \alert{genera} automaticamente getter e setter
-              \item proprietà \textbf{\texttt{val}}: \alert{genera} automaticamente getter
+              \item proprietà \textbf{\texttt{var}}: \alert{genera} automaticamente getter e setter.
+              \item proprietà \textbf{\texttt{val}}: \alert{genera} automaticamente getter.
             \end{itemize}
           \end{block}
         \end{column}
@@ -223,17 +223,20 @@
           \end{block}
           Kotlin differenzia tipi nullable e non-nullable aggiungendo il simbolo "\textbf{?}":
           \begin{itemize}
-            \item \texttt{String} - (Default) Non può essere null: non-nullable.
-            \item \texttt{String?} - Può essere null: nullable.
+            \item \texttt{String} - (Default) Non può essere null: \alert{non-nullable}.
+            \item \texttt{String?} - Può essere null: \alert{nullable}.
           \end{itemize}
-          \begin{block}{Gestione}
-            I tipi nullable vengono gestiti usando tipicamente l'operatore di \textbf{safe call} \alert{?.}
-          \end{block}
         \end{column}
         \begin{column}{0.5\textwidth}
-            \includegraphics[scale=0.4]{NullSafety}
+            \includegraphics[scale=0.33]{NullSafety}
         \end{column}
       \end{columns}
+      \begin{block}{Gestione}
+      \begin{itemize}
+        \item I tipi nullable vengono gestiti usando tipicamente l'operatore di \textbf{safe call} \textbf{\alert{?.}}
+        \item Per attivare una NPE su tipi nullable usare l'operatore \textbf{\alert{!!.}} (con parsimonia).
+      \end{itemize}
+      \end{block}
     \end{frame}
 
     \begin{frame}
@@ -245,7 +248,7 @@
       Una Data class crea \alert{implicitamente}:
       \begin{itemize}
         \item Metodi getters/setters.
-        \item Metodi equals(), hashCode(), toString(), copy().
+        \item Metodi \texttt{equals()}, \texttt{hashCode()}, \texttt{toString()}, \texttt{copy()}.
       \end{itemize}
     \end{frame}
 
