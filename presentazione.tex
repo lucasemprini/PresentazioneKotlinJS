@@ -92,19 +92,18 @@
 \title[KotlinJs]{%
     KotlinJS
 }
-\subtitle{Compilare Kotlin in JavaScript}
 
-\author[Luca~Semprini]{\large{Luca~Semprini}\\\medskip\small{0000854447}}
+\author[Luca~Semprini]{\large{Luca~Semprini}\\\medskip\small{\texttt{luca.semprini10@studio.unibo.it}}}
 
 % \date{30 maggio 2018}
 % \institute[]{%
     % Alma Mater Studiorum - Università di Bologna\\%
     % Campus di Cesena%
 % }
-% \titlegraphic{\includegraphics{Rx_Logo}}
+% \titlegraphic{\includegraphics{kotlin2jsLogo}}
 
 \date[30 maggio 2018]{}
-\institute[]{%
+\institute[0000854447]{%
     \includegraphics[scale=0.33]{kotlin2jsLogo}\\%
     \bigskip%
     \small{%
@@ -268,17 +267,19 @@
       \begin{block}{JetBrains afferma}
         \begin{itemize}[<+->]
           \item Scrivere una Web Application interamente in Kotlin.
-          \bigskip
+          \medskip
           \item Vantaggi di un linguaggio \textbf{staticamente tipizzato}.
-          \bigskip
+          \medskip
           \item Tutti i vantaggi dell'approccio funzionale.
-          \bigskip
+          \medskip
           \item Con la possibilità di definire dei $Dynamic$ $Types$.
-          \bigskip
+          \medskip
           \item Riduzione della verbosità per molti costrutti.
-          \bigskip
+          \medskip
           \item Librerie in continua evoluzione.
-          \bigskip
+          \medskip
+          \item Linguaggio che si presta alla costruzione di DSL.
+          \medskip
         \end{itemize}
       \end{block}
     \end{frame}
@@ -307,17 +308,27 @@
 
     \begin{frame}
       \frametitle{Getting Started (2)}
-      \begin{block}{Compilazione}
-        Quando compila in JavaScript, Kotlin esegue due file principali:
-        \begin{itemize}
-          \item \textbf{kotlin.js}: La runtime e la standard library, indipendente dalle applicazioni e legato
-          alla versione di Kotlin usata.
-          \item \textbf{\{module\}.js}: Il codice effettivo dall'applicazione; infatti, tutti i file vengono compilati
-          in un unico file JavaScript che ha lo stesso nome del modulo.
-        \end{itemize}
-        Inoltre, ognuno di questi ha anche un meta file (\textbf{\{file\}.meta.js}) corrispondente che verrà
-        utilizzato per le Reflection ed altre funzionalità.
-      \end{block}
+      \begin{columns}
+        \begin{column}{0.47\textwidth}
+          \begin{block}{Compilazione}
+            Quando compila in JavaScript, Kotlin esegue due file principali:
+            \begin{itemize}
+              \item \textbf{kotlin.js}: La runtime e la standard library, indipendente dalle applicazioni e legato
+              alla versione di Kotlin usata.
+              \item \textbf{\{module\}.js}: Il codice effettivo dall'applicazione; infatti, tutti i file vengono compilati
+              in un unico file JavaScript che ha lo stesso nome del modulo.
+            \end{itemize}
+            Inoltre, ognuno di questi ha anche un meta file (\textbf{\{file\}.meta.js}) corrispondente che verrà
+            utilizzato per le Reflection ed altre funzionalità.
+          \end{block}
+        \end{column}
+        \begin{column}{0.5\textwidth}
+          \begin{center}
+            \includegraphics[scale=0.5]{ProjectStructure}
+          \end{center}
+        \end{column}
+      \end{columns}
+
     \end{frame}
 
     \begin{frame}
@@ -355,7 +366,7 @@
     \begin{frame}
       \frametitle{Un DSL per HTML: \textbf{kotlinx.html}}
       \begin{block}{Motivazione}
-        La libreria kotlinx.html fornisce un Domain-Specific-Language per \alert{generare} HTML, DOM o classi CSS.
+        La libreria \texttt{kotlinx.html} fornisce un Domain-Specific-Language per \alert{generare} HTML, DOM o classi CSS.
       \end{block}
       \begin{center}
         \includegraphics[scale=0.67]{KotlinxHtmlEx}
