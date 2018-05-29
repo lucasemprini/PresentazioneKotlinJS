@@ -68,9 +68,28 @@
 \usepackage[pdf15,a-1b]{pdfx}
 
 \usetheme{Boadilla}             % serve per scegliere il layout generale dei frame
+\definecolor{antiquewhite}{RGB}{251,234,205}
+\definecolor{chocolate}{RGB}{238,128,46}
+\definecolor{royalblue}{RGB}{22,142,216}
+\definecolor{darkroyalblue}{RGB}{104,117,226}
+\definecolor{white}{RGB}{251,251,251}
+\definecolor{mediumorchid}{RGB}{167,107,183}
+\definecolor{violetred}{RGB}{213,101,139}
+\definecolor{darksalmon}{RGB}{225,113,91}
+
 \usecolortheme{beaver}          % Per il colore va comunque bene questo
 \setbeamerfont{block title}{size=\normalsize}
 \setbeamerfont{block body}{size=\small}
+\setbeamercolor{palette primary}{fg=white, bg=mediumorchid}
+\setbeamercolor{palette secondary}{fg=antiquewhite, bg=chocolate}
+\setbeamercolor{palette tertiary}{fg=white, bg=royalblue}
+% \setbeamercolor{title}{fg=white}
+% \setbeamercolor{subtitle}{fg=white}
+\setbeamercolor{title}{fg=white, bg=darkroyalblue}
+\setbeamercolor{subtitle}{fg=royalblue, bg=white}
+\setbeamercolor{frametitle}{fg=violetred}
+\setbeamercolor{framesubtitle}{fg=mediumorchid}
+\setbeamercolor{block title}{fg=darkroyalblue}
 
 %% Permette di inserire l'outline prima di ogni sezione
 \AtBeginSection[]{%
@@ -258,7 +277,7 @@
       \frametitle{I costrutti principali di Kotlin (4)}
       \framesubtitle{EXTENSION FUNCTIONS}
       \begin{center}
-        \includegraphics[scale=0.4]{ExtFun}
+        \includegraphics[scale=0.38]{ExtFun}
       \end{center}
       \begin{itemize}
         \item Permette di aggiungere nuove funzionalità ad una classe (anche di Standard Library) senza l'utilizzo di ereditarietà o decoratori.
@@ -281,9 +300,9 @@
           \medskip
           \item Riduzione della verbosità per molti costrutti.
           \medskip
-          \item Librerie in continua evoluzione.
-          \medskip
           \item Linguaggio che si presta alla costruzione di DSL.
+          \medskip
+          \item Librerie in continua evoluzione.
           \medskip
         \end{itemize}
       \end{block}
@@ -292,14 +311,14 @@
     \begin{frame}
       \frametitle{Kotlin vs. JavaScript: tipaggio statico}
       \begin{center}
-        \includegraphics[scale=0.35]{StatVSDinPNG}
+        \includegraphics[scale=0.33]{StatVSDinPNG}
       \end{center}
     \end{frame}
 
     \begin{frame}
       \frametitle{Getting Started (1)}
       \begin{block}{Diversi modi per compilare Kotlin in Javascript}
-        \begin{itemize}
+        \begin{itemize}[<+->]
           \item \alert{Gradle} (consigliato)
           \item IntelliJ IDEA
           \item Maven
@@ -314,9 +333,9 @@
     \begin{frame}
       \frametitle{Getting Started (2)}
       \begin{columns}
-        \begin{column}{0.47\textwidth}
+        \begin{column}{0.5\textwidth}
           \begin{block}{Compilazione}
-            Quando compila in JavaScript, Kotlin esegue due file principali:
+            Quando compila in JavaScript, Kotlin esegue \alert{due} file principali:
             \begin{itemize}
               \item \textbf{kotlin.js}: La runtime e la standard library, indipendente dalle applicazioni e legato
               alla versione di Kotlin usata.
@@ -327,7 +346,7 @@
             utilizzato per le Reflection ed altre funzionalità.
           \end{block}
         \end{column}
-        \begin{column}{0.5\textwidth}
+        \begin{column}{0.47\textwidth}
           \begin{center}
             \includegraphics[scale=0.5]{ProjectStructure}
           \end{center}
